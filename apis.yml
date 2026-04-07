@@ -1,5 +1,6 @@
 aid: dell-technologies
-url: https://raw.githubusercontent.com/api-evangelist/dell-technologies/refs/heads/main/apis.yml
+url: 
+  https://raw.githubusercontent.com/api-evangelist/dell-technologies/refs/heads/main/apis.yml
 modified: '2026-03-21'
 apis:
   - aid: dell-technologies:dell-api
@@ -9,7 +10,8 @@ apis:
       - Infrastructure
       - Servers
       - Storage
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: 
+      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://developer.dell.com/apis
     humanURL: https://developer.dell.com/
     properties:
@@ -18,4 +20,10 @@ apis:
       - url: openapi/dell-technologies-dell-api-openapi.yml
         type: OpenAPI
     description: >-
-      Dell Technologies provides APIs for managing infrastructure, configuring servers, monitoring systems, and automating IT operations. The platform includes APIs for PowerEdge, PowerStore, and other Dell enterprise products.
+      Dell Technologies provides APIs for managing infrastructure, configuring servers,
+      monitoring systems, and automating IT operations. The platform includes APIs
+      for PowerEdge, PowerStore, and other Dell enterprise products.
+description: >-
+  Dell Technologies is a global technology company that designs, develops, manufactures,
+  and supports a wide range of computing products including PCs, servers, storage,
+  networking equipment, and software services.
