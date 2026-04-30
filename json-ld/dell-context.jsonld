@@ -1,0 +1,17 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://schema.dell.com/",
+    "schema": "https://schema.org/",
+    "dell": "https://schema.dell.com/",
+    "Server": "dell:Server",
+    "Storage": "dell:Storage",
+    "Service": "schema:Service",
+    "id": {"@id": "schema:identifier"},
+    "name": {"@id": "schema:name", "@type": "schema:Text"},
+    "model": {"@id": "schema:model", "@type": "schema:Text"},
+    "service_tag": {"@id": "dell:serviceTag", "@type": "schema:Text"},
+    "status": {"@id": "dell:status", "@type": "schema:Text"},
+    "version": {"@id": "schema:softwareVersion", "@type": "schema:Text"}
+  }
+}

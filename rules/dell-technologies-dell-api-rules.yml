@@ -1,0 +1,40 @@
+extends:
+  - spectral:oas
+rules:
+  dell-info-contact:
+    description: API info should include Dell developer support contact.
+    given: $.info
+    severity: warn
+    then:
+      field: contact
+      function: truthy
+  dell-base-url:
+    description: Servers should reference developer.dell.com.
+    given: $.servers[*].url
+    severity: warn
+    then:
+      function: pattern
+      functionOptions:
+        match: "developer\\.dell\\.com"
+  dell-bearer-auth:
+    description: API should declare bearer-token authentication.
+    given: $.components.securitySchemes
+    severity: error
+    then:
+      field: bearerAuth
+      function: truthy
+  dell-operation-tags:
+    description: Operations should be tagged with infrastructure categories.
+    given: $.paths[*][*]
+    severity: warn
+    then:
+      field: tags
+      function: truthy
+  dell-status-resource:
+    description: API should expose a /status resource for health checks.
+    given: $.paths
+    severity: info
+    then:
+      function: pattern
+      functionOptions:
+        match: "/status"

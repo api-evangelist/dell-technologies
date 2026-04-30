@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schema.dell.com/server.json",
+  "title": "Dell Server",
+  "type": "object",
+  "properties": {
+    "service_tag": {"type": "string", "description": "Unique Dell service tag identifier."},
+    "model": {"type": "string", "description": "Dell server model (e.g. PowerEdge R750)."},
+    "name": {"type": "string", "description": "Administrator-assigned name for the server."},
+    "status": {"type": "string", "description": "Operational status of the server."},
+    "firmware_version": {"type": "string", "description": "Current firmware version installed on the server."}
+  },
+  "required": ["service_tag", "model"]
+}

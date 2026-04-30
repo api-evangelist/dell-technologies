@@ -1,0 +1,20 @@
+name: Dell Technologies API Capabilities
+description: >-
+  Capabilities exposed by the Dell Technologies API for monitoring
+  developer-platform health and providing a starting point for managing
+  Dell infrastructure (servers, storage, OpenManage).
+capabilities:
+  - name: Get API Status
+    description: Return the current operational status and version of the Dell developer API surface.
+    operationId: getStatus
+    method: GET
+    path: /status
+use_cases:
+  - name: Infrastructure automation
+    description: Automate provisioning, configuration, and lifecycle management of Dell PowerEdge servers and PowerStore arrays.
+  - name: Operational monitoring
+    description: Pull telemetry and health from Dell systems into enterprise observability stacks.
+  - name: Datacenter integration
+    description: Wire Dell hardware into ITSM, CMDB, and orchestration platforms via the developer APIs.
+  - name: Edge and APEX deployments
+    description: Manage Dell APEX and edge infrastructure through programmatic interfaces.

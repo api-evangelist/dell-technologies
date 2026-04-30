@@ -1,0 +1,19 @@
+name: Dell Technologies Vocabulary
+description: >-
+  Shared vocabulary of terms used across Dell Technologies developer APIs
+  and infrastructure management surfaces.
+terms:
+  - term: PowerEdge
+    definition: Dell's family of enterprise server systems for datacenter and edge workloads.
+  - term: PowerStore
+    definition: Dell's unified storage array platform for block, file, and VMware vVols workloads.
+  - term: PowerScale
+    definition: Dell's scale-out NAS platform for unstructured data and analytics workloads.
+  - term: OpenManage
+    definition: Dell's systems-management portfolio for monitoring and managing PowerEdge servers.
+  - term: APEX
+    definition: Dell's portfolio of as-a-service offerings for storage, compute, and infrastructure.
+  - term: iDRAC
+    definition: Integrated Dell Remote Access Controller for out-of-band server management.
+  - term: Service Tag
+    definition: Unique identifier assigned to each Dell device used for support and warranty lookup.
