@@ -1,0 +1,13 @@
+{
+  "repo": "dell-technologies",
+  "feeds": [
+    {
+      "source": "https://www.dell.com/en-us/blog/",
+      "feed_url": "https://www.dell.com/en-us/blog/feed/",
+      "saved": 10,
+      "title": "Blog | Dell"
+    }
+  ],
+  "post_count": 10,
+  "fetched": "2026-05-03T23:26:56Z"
+}
