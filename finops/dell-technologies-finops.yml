@@ -8,34 +8,44 @@ alignedWith:
   dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
 provider: Dell Technologies
 providerId: dell-technologies
-publisherName: Dell Technologies
-serviceCategory: API
+publisherName: Dell Technologies Inc.
+serviceCategory: Enterprise IT / Infrastructure
 created: '2026-05-04'
-modified: '2026-05-04'
+modified: '2026-05-05'
+reconciled: false
+notes: Dell APIs (Redfish / iDRAC, OpenManage, PowerStore, Premier, APEX) are billed indirectly via the
+  underlying product entitlement or APEX consumption subscription. There is no per-API-call price; FinOps
+  shape follows hardware lifecycle plus APEX consumption metering. Reconcile against APEX subscription
+  invoices when available.
 tags:
   - Enterprise IT
   - Infrastructure
   - Servers
   - Storage
-  - Cloud
-  - Automation
+  - APEX
   - FinOps
-  - Cost Management
   - FOCUS
-description: FinOps framework definition for the Dell Technologies API surface. Provides a FOCUS-aligned
-  mapping for cost allocation, usage measurement, and unit-economics reporting across the provider's APIs.
+description: 'FOCUS-aligned FinOps for Dell Technologies APIs. Bundled-with-product economics for management
+  APIs (iDRAC, OpenManage, PowerStore) plus APEX consumption-based subscription metering for cloud and
+  as-a-service offerings.'
+sources:
+  - https://developer.dell.com/apis
+  - https://www.dell.com/en-us/dt/apex/index.htm
 principles:
   - name: Visibility
-    description: Make API consumption costs visible to engineering, product, and finance teams in near
-      real-time.
+    description: For APEX consumption, use the APEX Console / APEX Cloud Services dashboards to track
+      capacity-on-demand metering (storage GB, instance-hours, data services). For on-prem product APIs,
+      observe at the device / array level via OpenManage Enterprise telemetry.
   - name: Allocation
-    description: Tag every chargeable API call with the consuming team, environment, application, and
-      feature so cost can be allocated.
+    description: Allocate APEX subscription costs to the consuming workload via APEX subscription tags;
+      allocate on-prem device usage by service tag and asset record from Dell Premier inventory.
   - name: Optimization
-    description: Continuously evaluate request patterns, caching, batching, and tier selection to reduce
-      cost per useful unit of work.
+    description: Right-size APEX subscriptions against actual capacity utilization; consolidate iDRAC
+      management traffic and OpenManage automation jobs to avoid licensing extra OME instances; review
+      data services and replication add-ons.
   - name: Accountability
-    description: Establish budget owners and chargeback or showback flows for each consuming team.
+    description: Asset owners track hardware lifecycle cost; APEX subscription owners track consumption
+      drift; route invoice anomalies through Dell account team.
 domains:
   - name: Understand Usage and Cost
     capabilities:
@@ -55,63 +65,63 @@ domains:
       - Architecting for Cloud
       - Rate Optimization
       - Workload Optimization
-      - Cloud Sustainability
       - Licensing and SaaS
   - name: Manage the FinOps Practice
     capabilities:
       - FinOps Practice Operations
-      - FinOps Education and Enablement
       - Invoicing and Chargeback
       - Onboarding Workloads
-      - Intersecting Disciplines
 billingModel:
-  pricingCategory: Usage-Based
+  pricingCategory: Hardware Entitlement + APEX Consumption Subscription
   billingFrequency: Monthly
   billingCurrency: USD
   chargeCategories:
-    - Usage
     - Purchase
+    - Usage
     - Tax
     - Credit
     - Adjustment
   chargeFrequency: Recurring
 focusColumns:
-  ServiceName: Dell Technologies
-  ServiceCategory: Developer Tools / API
+  ServiceName: Dell Technologies API
+  ServiceCategory: Enterprise IT / Infrastructure
   ProviderName: Dell Technologies
-  PublisherName: Dell Technologies
-  InvoiceIssuerName: Dell Technologies
-  PricingCategory: Usage-Based
-  PricingUnit: request
+  PublisherName: Dell Technologies Inc.
+  InvoiceIssuerName: Dell Technologies Inc.
+  PricingCategory: Subscription + Hardware
+  PricingUnit: varies
   BillingCurrency: USD
   ChargeCategory: Usage
 meters:
-  - name: api_requests
-    description: Count of billable API requests
-    unit: request
-    aggregation: sum
-    dimensions:
-      - api
-      - endpoint
-      - tier
-      - region
-      - consumer
-  - name: data_egress
-    description: Bytes returned over the network in API responses
+  - name: apex_capacity
+    description: APEX storage / compute capacity reserved (committed) and on-demand
     unit: GB
-    aggregation: sum
+    aggregation: max
     dimensions:
-      - api
+      - subscription
+      - product
       - region
-      - consumer
-  - name: compute_seconds
-    description: Server-side compute consumed by the request, where applicable
-    unit: second
+  - name: apex_consumption
+    description: APEX consumption-based metered usage above commitment
+    unit: varies
     aggregation: sum
     dimensions:
-      - api
-      - endpoint
-      - tier
+      - subscription
+      - product
+      - region
+  - name: support_subscription
+    description: ProSupport / ProSupport Plus / Keep Your Hard Drive entitlements
+    unit: month
+    aggregation: sum
+    dimensions:
+      - service_tag
+      - service_level
+  - name: management_seat
+    description: OpenManage Enterprise advanced license seats
+    unit: seat
+    aggregation: max
+    dimensions:
+      - product
 apis:
   - name: Dell Technologies API
     baseURL: https://developer.dell.com/apis
@@ -126,11 +136,11 @@ apis:
     serviceName: Dell Technologies API
     serviceCategory: API
 unitEconomics:
-  - name: Cost per 1K Requests
-    metric: billed_cost / (api_requests / 1000)
+  - name: Cost per APEX-managed TB-month
+    metric: apex_subscription_cost / managed_tb_months
     target: TBD
-  - name: Cost per Active Consumer
-    metric: billed_cost / active_consumers
+  - name: Cost per Managed Asset
+    metric: support_cost / active_service_tags
     target: TBD
 maintainers:
   - FN: Kin Lane
