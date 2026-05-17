@@ -16,7 +16,7 @@ tags:
 created: '2024-12-03'
 modified: '2026-04-28'
 specificationVersion: '0.19'
-xType: company
+kind: company
 description: >-
   Dell Technologies is a global Fortune 500 technology company that designs,
   develops, manufactures, and supports a wide range of computing products,
@@ -65,7 +65,7 @@ common:
     url: https://www.dell.com/support
   - type: Blog
     url: https://www.dell.com/en-us/blog/
-  - type: JSON-LD
+  - type: JSONLD
     url: json-ld/dell-context.jsonld
   - type: Vocabulary
     url: vocabulary/dell-vocabulary.yml
