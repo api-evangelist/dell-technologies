@@ -1,0 +1,70 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Dell Technologies API — Enterprise IT
+  description: 'Dell Technologies API — Enterprise IT. 1 operations. Lead operation: Get API status. Self-contained Naftiko
+    capability covering one Dell Technologies business surface.'
+  tags:
+  - Dell Technologies
+  - Enterprise IT
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    DELL_TECHNOLOGIES_API_KEY: DELL_TECHNOLOGIES_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: dell-enterprise-it
+    baseUri: https://developer.dell.com/apis
+    description: Dell Technologies API — Enterprise IT business capability. Self-contained, no shared references.
+    resources:
+    - name: status
+      path: /status
+      operations:
+      - name: getstatus
+        method: GET
+        description: Get API status
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: bearer
+      token: '{{env.DELL_TECHNOLOGIES_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: dell-enterprise-it-rest
+    port: 8080
+    description: REST adapter for Dell Technologies API — Enterprise IT. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/status
+      name: status
+      description: REST surface for status.
+      operations:
+      - method: GET
+        name: getstatus
+        description: Get API status
+        call: dell-enterprise-it.getstatus
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: dell-enterprise-it-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Dell Technologies API — Enterprise IT. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: get-api-status
+      description: Get API status
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: dell-enterprise-it.getstatus
+      outputParameters:
+      - type: object
+        mapping: $.
