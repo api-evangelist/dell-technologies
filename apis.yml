@@ -51,6 +51,12 @@ apis:
       - type: JSONSchema
         url: json-schema/dell-server-schema.json
 common:
+  - type: VulnerabilityDisclosure
+    url: security/dell-technologies-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/dell-technologies-domain-security.yml
+  - type: Authentication
+    url: authentication/dell-technologies-authentication.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/delltechnologies
   - type: Website
