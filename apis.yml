@@ -51,6 +51,8 @@ apis:
       - type: JSONSchema
         url: json-schema/dell-server-schema.json
 common:
+  - type: AgenticAccess
+    url: agentic-access/dell-technologies-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/dell-technologies-vulnerability-disclosure.yml
   - type: DomainSecurity
