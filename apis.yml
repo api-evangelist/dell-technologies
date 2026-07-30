@@ -2,9 +2,22 @@ aid: dell-technologies
 name: Dell Technologies
 url: https://raw.githubusercontent.com/api-evangelist/dell-technologies/refs/heads/main/apis.yml
 type: Index
+accessModel:
+  pricing: enterprise
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Enterprise · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 position: Consumer
 access: 3rd-Party
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/dell-technologies.png
 tags:
   - Enterprise IT
   - Infrastructure
@@ -23,33 +36,24 @@ description: >-
   OpenManage, APEX, and related infrastructure products, enabling automation of IT operations and integration into
   enterprise tooling.
 apis:
-  - aid: dell-technologies:dell-api
-    name: Dell Technologies API
-    description: >-
-      The Dell Technologies API provides programmatic access to Dell developer platform capabilities for managing
-      infrastructure, configuring servers, monitoring systems, and automating IT operations across PowerEdge,
-      PowerStore, PowerScale, and OpenManage product lines.
-    humanURL: https://developer.dell.com/
-    baseURL: https://developer.dell.com/apis
-    tags:
-      - Enterprise IT
-      - Infrastructure
-      - Servers
-      - Storage
-      - PowerEdge
-      - PowerStore
-      - OpenManage
-    properties:
-      - type: Documentation
-        url: https://developer.dell.com/
-      - type: OpenAPI
-        url: openapi/dell-technologies-dell-api-openapi.yml
-      - type: Rules
-        url: rules/dell-technologies-dell-api-rules.yml
-      - type: Capabilities
-        url: capabilities/dell-technologies-dell-api-capabilities.yml
-      - type: JSONSchema
-        url: json-schema/dell-server-schema.json
+- aid: dell-technologies:dell-technologies-enterprise-it-api
+  name: Dell Technologies Enterprise IT API
+  description: Enterprise IT operations
+  humanURL: https://developer.dell.com/
+  baseURL: https://developer.dell.com/apis
+  tags:
+  - Enterprise IT
+  properties:
+  - type: OpenAPI
+    url: openapi/dell-technologies-enterprise-it-api-openapi.yml
+  - type: Documentation
+    url: https://developer.dell.com/
+  - type: Rules
+    url: rules/dell-technologies-dell-api-rules.yml
+  - type: Capabilities
+    url: capabilities/dell-technologies-dell-api-capabilities.yml
+  - type: JSONSchema
+    url: json-schema/dell-server-schema.json
 common:
   - type: AgenticAccess
     url: agentic-access/dell-technologies-agentic-access.yml
