@@ -1,0 +1,14 @@
+{
+  "provider": "dell-technologies",
+  "sources": [
+    "dell-technologies-enterprise-it-api-openapi.yml"
+  ],
+  "outputs": [
+    "dell-technologies-enterprise-it-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
