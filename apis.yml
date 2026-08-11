@@ -50,8 +50,6 @@ apis:
     url: https://developer.dell.com/
   - type: Rules
     url: rules/dell-technologies-dell-api-rules.yml
-  - type: Capabilities
-    url: capabilities/dell-technologies-dell-api-capabilities.yml
   - type: JSONSchema
     url: json-schema/dell-server-schema.json
 common:
