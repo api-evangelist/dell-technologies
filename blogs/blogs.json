@@ -4,8 +4,9 @@
     {
       "source": "https://www.dell.com/en-us/blog/rss",
       "feed_url": "https://www.dell.com/en-us/blog/rss",
+      "title": "",
       "saved": 0,
-      "error": "no_feed_no_posts"
+      "method": "feed"
     },
     {
       "source": "https://www.dell.com/support",
@@ -15,6 +16,6 @@
       "method": "none"
     }
   ],
-  "post_count": 128,
-  "fetched": "2026-08-06T14:08:46Z"
+  "post_count": 138,
+  "fetched": "2026-08-15T12:22:01Z"
 }
