@@ -141,10 +141,8 @@ apis:
 unitEconomics:
   - name: Cost per APEX-managed TB-month
     metric: apex_subscription_cost / managed_tb_months
-    target: TBD
   - name: Cost per Managed Asset
     metric: support_cost / active_service_tags
-    target: TBD
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
