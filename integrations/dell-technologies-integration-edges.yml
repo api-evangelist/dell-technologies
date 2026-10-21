@@ -103,6 +103,51 @@ edges:
     detected: '2026-10-19'
   detected_by: sweep-cloud-native.py
   first_seen: '2026-10-15'
+- partner_name: Pulumi (pulumi-registry)
+  partner: pulumi
+  partner_match: mirror
+  mirror_match: domain+verified
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: pulumi-registry
+  evidence: https://www.pulumi.com/registry/packages/powerflex/
+  mirror_of: pulumi/integrations/pulumi-integration-edges.yml
+  apps:
+  - powerflex
+  - powerscale
+  - powerstore
+  listing_count: 1
+  detected: '2026-10-21'
+  detected_by: mirror-platform-listings.py
+  category: infrastructure-as-code provider registry listing
+- partner_name: Terraform (terraform-registry)
+  partner: terraform
+  partner_match: mirror
+  mirror_match: domain+name-among-holders
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: terraform-registry
+  evidence: https://registry.terraform.io/providers/dell/objectscale
+  mirror_of: terraform/integrations/terraform-integration-edges.yml
+  apps:
+  - dell/objectscale
+  - dell/powerscale
+  - dell/redfish
+  - dell/ome
+  - dell/powermax
+  - dell/powerflex
+  - dell/powerstore
+  - dell/apex
+  listing_count: 1
+  detected: '2026-10-21'
+  detected_by: mirror-platform-listings.py
+  category: infrastructure-as-code provider registry listing
+  badges:
+  - Verified publisher (Terraform partner tier)
 generated: '2026-10-15'
 method: searched
 source:
@@ -115,3 +160,5 @@ checked:
 - https://github.com/kubeflow/website
 - https://github.com/lfai/landscape
 - https://github.com/mlcommons
+- pulumi/integrations/pulumi-integration-edges.yml
+- terraform/integrations/terraform-integration-edges.yml
