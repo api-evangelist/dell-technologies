@@ -148,6 +148,56 @@ edges:
   category: infrastructure-as-code provider registry listing
   badges:
   - Verified publisher (Terraform partner tier)
+- partner_name: Open Compute Project Foundation
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.opencompute.org/membership/membership-directory
+  category: open data center hardware standards membership
+  contract_reference:
+    register: Open Compute Project membership directory (opencompute.org/membership/membership-directory)
+    standard: Open Compute Project (OCP) specifications
+    spec_file: null
+    role: ocp-member
+    registered_name: Dell Inc. / Dell Technologies
+    register_id: https://www.dell.com/
+    matched_domain: dell.com
+    matched_by: domain+name-among-holders
+    member_since: '2016'
+    signal_note: 'participation only: corporate membership of the Open Compute Project (level recorded as partner_tier);
+      membership is not product conformance (OCP Accepted / Inspired products are a separate marketplace, not read)'
+    detected_by: sweep-data-center-tier-certification.py
+    detected: '2026-10-21'
+  detected_by: sweep-data-center-tier-certification.py
+  first_seen: '2026-10-21'
+  partner_tier: Platinum
+- partner_name: The Green Grid
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.thegreengrid.org/en/about-us/members
+  category: data center efficiency consortium membership
+  contract_reference:
+    register: The Green Grid members, Executive Leadership Council (thegreengrid.org/en/about-us/members)
+    standard: The Green Grid data-center efficiency metrics (PUE / WUE / CUE)
+    spec_file: null
+    role: green-grid-member
+    registered_name: Dell
+    register_id: https://www.dell.com/en-us/
+    matched_domain: dell.com
+    matched_by: domain+verified
+    signal_note: 'participation only: member of The Green Grid''s Executive Leadership Council (public logo wall;
+      the full roster is behind the member login and was not entered)'
+    detected_by: sweep-data-center-tier-certification.py
+    detected: '2026-10-21'
+  detected_by: sweep-data-center-tier-certification.py
+  first_seen: '2026-10-21'
 generated: '2026-10-15'
 method: searched
 source:
@@ -162,3 +212,7 @@ checked:
 - https://github.com/mlcommons
 - pulumi/integrations/pulumi-integration-edges.yml
 - terraform/integrations/terraform-integration-edges.yml
+- https://uptimeinstitute.com/uptime-institute-awards/list
+- https://www.climateneutraldatacentre.net/signatories/
+- https://www.opencompute.org/membership/membership-directory
+- https://www.thegreengrid.org/en/about-us/members

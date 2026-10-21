@@ -136,3 +136,52 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: dell-technologies-open-compute-project-foundation
+  label: Open Compute Project Foundation
+  partner_name: Open Compute Project Foundation
+  category: open data center hardware standards membership
+  type: register
+  channel: standard-directory
+  evidence: https://www.opencompute.org/membership/membership-directory
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: Open Compute Project membership directory (opencompute.org/membership/membership-directory)
+    standard: Open Compute Project (OCP) specifications
+    spec_file: null
+    role: ocp-member
+    registered_name: Dell Inc. / Dell Technologies
+    register_id: https://www.dell.com/
+    matched_domain: dell.com
+    matched_by: domain+name-among-holders
+    member_since: '2016'
+    signal_note: 'participation only: corporate membership of the Open Compute Project (level recorded as partner_tier);
+      membership is not product conformance (OCP Accepted / Inspired products are a separate marketplace, not read)'
+    detected_by: sweep-data-center-tier-certification.py
+    detected: '2026-10-21'
+  status: not-a-workflow
+  arazzo: null
+- slug: dell-technologies-the-green-grid
+  label: The Green Grid
+  partner_name: The Green Grid
+  category: data center efficiency consortium membership
+  type: register
+  channel: standard-directory
+  evidence: https://www.thegreengrid.org/en/about-us/members
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: The Green Grid members, Executive Leadership Council (thegreengrid.org/en/about-us/members)
+    standard: The Green Grid data-center efficiency metrics (PUE / WUE / CUE)
+    spec_file: null
+    role: green-grid-member
+    registered_name: Dell
+    register_id: https://www.dell.com/en-us/
+    matched_domain: dell.com
+    matched_by: domain+verified
+    signal_note: 'participation only: member of The Green Grid''s Executive Leadership Council (public logo wall;
+      the full roster is behind the member login and was not entered)'
+    detected_by: sweep-data-center-tier-certification.py
+    detected: '2026-10-21'
+  status: not-a-workflow
+  arazzo: null
