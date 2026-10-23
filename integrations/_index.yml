@@ -110,32 +110,6 @@
     detected: '2026-10-19'
   status: not-a-workflow
   arazzo: null
-- slug: dell-technologies-pulumi-pulumi-registry
-  label: Pulumi (pulumi-registry)
-  partner: pulumi
-  partner_name: Pulumi (pulumi-registry)
-  category: infrastructure-as-code provider registry listing
-  type: marketplace
-  marketplace: pulumi-registry
-  channel: partner-built
-  evidence: https://www.pulumi.com/registry/packages/powerflex/
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
-- slug: dell-technologies-terraform-terraform-registry
-  label: Terraform (terraform-registry)
-  partner: terraform
-  partner_name: Terraform (terraform-registry)
-  category: infrastructure-as-code provider registry listing
-  type: marketplace
-  marketplace: terraform-registry
-  channel: partner-built
-  evidence: https://registry.terraform.io/providers/dell/objectscale
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: dell-technologies-open-compute-project-foundation
   label: Open Compute Project Foundation
   partner_name: Open Compute Project Foundation
@@ -249,5 +223,44 @@
       names CSIRT / PSIRT / SOC; never a count
     detected_by: sweep-vulnerability-disclosure-cna.py
     detected: '2026-10-22'
+  status: not-a-workflow
+  arazzo: null
+- slug: dell-technologies-pulumi-pulumi-registry
+  label: Pulumi (pulumi-registry)
+  partner: pulumi
+  partner_name: Pulumi (pulumi-registry)
+  category: infrastructure-as-code provider registry listing
+  type: marketplace
+  marketplace: pulumi-registry
+  channel: partner-built
+  evidence: https://www.pulumi.com/registry/packages/powerflex/
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: dell-technologies-terraform-terraform-registry
+  label: Terraform (terraform-registry)
+  partner: terraform
+  partner_name: Terraform (terraform-registry)
+  category: infrastructure-as-code provider registry listing
+  type: marketplace
+  marketplace: terraform-registry
+  channel: partner-built
+  evidence: https://registry.terraform.io/providers/dell/objectscale
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: dell-technologies-ansible-ansible-galaxy
+  label: Ansible (ansible-galaxy)
+  partner: ansible
+  partner_name: Ansible (ansible-galaxy)
+  category: configuration-management content listing (Ansible collection)
+  type: marketplace
+  marketplace: ansible-galaxy
+  channel: partner-built
+  evidence: https://galaxy.ansible.com/ui/repo/published/dellemc/openmanage/
+  source: edge
+  relationship: platform-app
   status: not-a-workflow
   arazzo: null
