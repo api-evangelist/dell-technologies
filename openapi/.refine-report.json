@@ -1,20 +1,29 @@
 {
   "provider": "dell-technologies",
   "sources": [
-    "_original/dell-technologies-dell-api-openapi.yml"
+    "_original/dell-technologies-openapi.json"
   ],
   "outputs": [
-    "dell-technologies-enterprise-it-api-openapi.yml"
+    "dell-technologies-content-security-controller-api-openapi.yml",
+    "dell-technologies-controller-api-openapi.yml",
+    "dell-technologies-health-controller-api-openapi.yml",
+    "dell-technologies-load-balancer-controller-api-openapi.yml",
+    "dell-technologies-management-gateway-controller-api-openapi.yml",
+    "dell-technologies-refresh-controller-api-openapi.yml"
   ],
   "archived": [],
   "errors": [],
   "warnings": [],
   "notes": [
     "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
-    "dell-technologies-dell-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "apis.yml register: already-registered"
+    "dell-technologies-openapi.json: upgraded openapi 3.1.0 -> OpenAPI 3.2.0; renamed 1 component key(s) illegal in 3.x (e.g. bearer token)",
+    "dell-technologies-openapi.json: declared missing tag: content-security-controller",
+    "dell-technologies-openapi.json: declared missing tag: controller",
+    "dell-technologies-openapi.json: declared missing tag: health-controller",
+    "dell-technologies-openapi.json: declared missing tag: load-balancer-controller",
+    "dell-technologies-openapi.json: declared missing tag: management-gateway-controller",
+    "dell-technologies-openapi.json: declared missing tag: refresh-controller",
+    "apis.yml register: written (+6 apis, 6 total)"
   ],
-  "skipped": [
-    "dell-technologies-enterprise-it-api-openapi.yml: previously refined output, superseded by openapi/_original/"
-  ]
+  "skipped": []
 }
