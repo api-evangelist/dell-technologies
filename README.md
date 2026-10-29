@@ -1,4 +1,4 @@
-# Dell Technologies (dell-technologies)
+# Dell Technologies
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,69 +66,141 @@
 
 Dell Technologies is a global Fortune 500 technology company that designs, develops, manufactures, and supports a wide range of computing products, including PCs, servers, storage, networking equipment, and software services. Dell publishes a developer platform exposing APIs and SDKs for managing PowerEdge servers, PowerStore storage, PowerScale, OpenManage, APEX, and related infrastructure products, enabling automation of IT operations and integration into enterprise tooling.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/dell-technologies/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/dell-technologies/refs/heads/main/apis.yml)
+**Areas:** Enterprise IT · Infrastructure · Servers · Storage · Cloud · Automation
 
-## Scope
+## Dell Technologies on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for Dell Technologies is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/dell-technologies/](https://apis.io/providers/dell-technologies/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (1)
 
-- Enterprise IT
-- Infrastructure
-- Servers
-- Storage
-- Cloud
-- Automation
+- [Dell Technologies Enterprise IT API](https://apis.io/apis/dell-technologies/dell-technologies-enterprise-it-api/) — Enterprise IT operations
 
-## Timestamps
+### Published properties
 
-- **Created:** 2024-12-03
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Dell Technologies API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The Dell Technologies API provides programmatic access to Dell developer platform capabilities for managing infrastructure, configuring servers, monitoring systems, and automating IT operations across PowerEdge, PowerStore, PowerScale, and OpenManage product lines.
+- [Dell Technologies Agentic Access](https://apis.io/agentic-access/dell-technologies/dell-technologies-agentic-access/)
 
-- **Human URL:** [https://developer.dell.com/](https://developer.dell.com/)
-- **Base URL:** `https://developer.dell.com/apis`
+#### JSON Schema (1)
 
-#### Tags
+The data models the API reads and writes.
 
-- Enterprise IT
-- Infrastructure
-- Servers
-- Storage
-- PowerEdge
-- PowerStore
-- OpenManage
+- [Dell Server](https://apis.io/schemas/dell-technologies/dell-server/)
 
-#### Properties
+#### JSON-LD (1)
 
-- [Documentation](https://developer.dell.com/)
-- [OpenAPI](openapi/dell-technologies-dell-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/dell-technologies-dell-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/dell-technologies-dell-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Rules](rules/dell-technologies-dell-api-rules.yml)
-- [Capabilities](capabilities/dell-technologies-dell-api-capabilities.yml)
-- [JSON Schema](json-schema/dell-server-schema.json) — [JSON Schema](https://json-schema.org/specification)
+Linked-data contexts for the provider's vocabulary.
 
-## Common Properties
+- [Dell Context](https://apis.io/jsonld/dell-technologies/dell-context/)
 
-- [LinkedIn](https://www.linkedin.com/company/delltechnologies)
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Dell Technologies Vocabulary](https://apis.io/vocabularies/dell-technologies/dell-vocabulary/)
+
+#### Collections (2)
+
+Postman and Open Collection request collections.
+
+- [Dell Technologies API](https://apis.io/collections/dell-technologies/open-dell-technologies-dell-api/)
+- [Dell Technologies Enterprise IT API](https://apis.io/collections/dell-technologies/open-dell-technologies-enterprise-it-api/)
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [Dell Technologies — dell api rules](https://apis.io/rules/dell-technologies/dell-technologies-dell-api-rules/)
+- [Dell Technologies — jsonschema rules](https://apis.io/rules/dell-technologies/dell-technologies-jsonschema-spectral-rules/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Dell Technologies Authentication](https://apis.io/security/dell-technologies/dell-technologies-authentication/)
+- [Dell Technologies Domain Security](https://apis.io/security/dell-technologies/dell-technologies-domain-security/)
+- [Dell Technologies Vulnerability Disclosure](https://apis.io/security/dell-technologies/dell-technologies-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Dell Technologies Plans Pricing](https://apis.io/plans/dell-technologies/dell-technologies-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Dell Technologies Rate Limits](https://apis.io/rate-limits/dell-technologies/dell-technologies-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Dell Technologies Finops](https://apis.io/finops/dell-technologies/dell-technologies-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://www.dell.com/)
-- [Developer  Portal](https://developer.dell.com/)
-- [Git Hub](https://github.com/dell)
 - [Support](https://www.dell.com/support)
 - [Blog](https://www.dell.com/en-us/blog/)
-- [JSON-LD](json-ld/dell-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [Vocabulary](vocabulary/dell-vocabulary.yml)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 34.2** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 58.5 |
+| Contract governance | 27.3 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 31.0 |
+| Access clarity | 5.3 |
+
+**Agent readiness 20.7** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 22.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/dell-technologies/](https://apis.io/providers/dell-technologies/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Dell Technologies: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/dell-technologies/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
